@@ -12,11 +12,20 @@ router3 = Netmiko(ip='192.168.99.139',
                  username='cisco',
                  password='cisco@12345',
                  device_type='cisco_ios')
-show_ip_details_R1 = router1.send_command ['enable',
-'configure terminal',
-'interface loopback 0',
-'ip address 172.16.16.1 255.255.255.255'
-                                            ]
+
+print(router1.find_prompt())
+print(router2.find_prompt())
+print(router3.find_prompt())
+
+show_ip_details_R1 = router1.send_command("show ip interface")
+show_ip_details_R2 = router2.send_command("show ip interface")
+show_ip_details_R3 = router3.send_command("show ip interface")
+
+print(show_ip_details_R1)
+print(show_ip_details_R2)
+print(show_ip_details_R3)
+
+
 
 
 
