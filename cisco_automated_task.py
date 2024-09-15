@@ -17,9 +17,9 @@ print(router1.find_prompt())
 print(router2.find_prompt())
 print(router3.find_prompt())
 
-show_ip_details_R1 = router1.send_command("show ip interface brief")
-show_ip_details_R2 = router2.send_command("show ip interface brief")
-show_ip_details_R3 = router3.send_command("show ip interface brief")
+show_ip_details_R1 = router1.send_command("show ip interface")
+show_ip_details_R2 = router2.send_command("show ip interface")
+show_ip_details_R3 = router3.send_command("show ip interface")
 
 print(show_ip_details_R1)
 print(show_ip_details_R2)
